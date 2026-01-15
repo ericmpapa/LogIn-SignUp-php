@@ -6,12 +6,7 @@
     </head>
     <body>
 
-        <?php
-            $msg = $_GET['msg'];
-            if(!is_null(msg)){
-                echo '<div class="alert alert-danger" role="alert">'.$msg.'</div>';
-            }
-        ?>
+        
         <div class="container">
             <div class="row">
                 <div class="col"></div>
@@ -19,6 +14,13 @@
 
 
                     <form method="POST" action="/login">
+
+                    <?php
+                        $msg = $_GET['msg'];
+                        if(!is_null($msg)){
+                            echo '<div class="alert alert-danger" role="alert">'.$msg.'</div>';
+                        }
+                    ?>
 
                     <h1 class="py-4"> Connexion au site</h1>
         <!-- Email input -->
