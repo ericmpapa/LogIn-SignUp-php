@@ -4,8 +4,8 @@ require "DataBase.php";
 $db = new DataBase();
 if (isset($_POST['username']) && isset($_POST['password'])) {
     echo 'ok';
-    /*if ($db->dbConnect()) {
-        if ($db->logIn("users", $_POST['username'], $_POST['password'])) {
+    if ($db->dbConnect()) {
+        /*if ($db->logIn("users", $_POST['username'], $_POST['password'])) {
             echo '<div class="alert alert-success" role="alert">' Connexion réussie'</div>';
         } else{
             $target_url = "index.php?msg=" . urlencode("Erreur: les paramètres d'accès sont incorrects");
@@ -13,13 +13,14 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             // Perform the redirect
             header("Location: " . $target_url, true, 302); // 302 is a temporary redirect
             exit; 
-        }
+        }*/
     } else {
-        $target_url = "index.php?msg=" . urlencode("Erreur: connexion à la base de donnée");
+        echo "not ok";
+        /*$target_url = "index.php?msg=" . urlencode("Erreur: connexion à la base de donnée");
 
         // Perform the redirect
         header("Location: " . $target_url, true, 302); // 302 is a temporary redirect
-        exit;
+        exit;*/
     }*/
 } else {
         $target_url = "index.php?msg=" . urlencode("Erreur: Tous les champs doivent être remplis");
