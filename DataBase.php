@@ -31,7 +31,8 @@ class DataBase
 
     function prepareData($data)
     {
-        return mysqli_real_escape_string($this->connect, stripslashes(htmlspecialchars($data)));
+        return $data;
+        # TODO use secure return mysqli_real_escape_string($this->connect, stripslashes(htmlspecialchars($data)));
     }
 
     function logIn($table, $username, $password)
@@ -44,7 +45,7 @@ class DataBase
         if (mysqli_num_rows($result) != 0) {
             $dbusername = $row['username'];
             $dbpassword = $row['password'];
-            if ($dbusername == $username && password_verify($password, $dbpassword)) {
+            if ($dbusername == $username && $password == $dbpassword) { # TODO use secure if ($dbusername == $username && password_verify($password, $dbpassword)) {
                 $login = true;
             } else $login = false;
         } else $login = false;
