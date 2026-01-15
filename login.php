@@ -26,7 +26,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         header("Location: " . $target_url, true, 302); // 302 is a temporary redirect
         exit;
     }
-} else else {
+} else {
         $target_url = "index.php?msg=" . urlencode("Erreur: Tous les champs doivent être remplis");
 
         // Perform the redirect
