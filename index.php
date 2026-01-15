@@ -8,11 +8,19 @@
 
         <?php
             $msg = $_GET['msg'];
-            if(msg){
-                echo '<div class="alert alert-primary" role="alert">'.$msg.'</div>';
+            if(!is_null(msg)){
+                echo '<div class="alert alert-danger" role="alert">'.$msg.'</div>';
             }
         ?>
-        <form method="POST" action="/login">
+        <div class="container">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+
+
+                    <form method="POST" action="/login">
+
+                    <h1 class="py-4"> Connexion au site</h1>
         <!-- Email input -->
 
 
@@ -67,6 +75,11 @@
             </button>
         </div>
         </form>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        
     </body>
 </html>
 
