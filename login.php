@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-         <link rel="stylesheet" href="bootstrap.min.css" />
-         <script src="bootstrap.bundle.min.js"></script>
-    </head>
-    <body>
+
 <?php
 require "DataBase.php";
 $db = new DataBase();
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    if ($db->dbConnect()) {
+    echo 'ok';
+    /*if ($db->dbConnect()) {
         if ($db->logIn("users", $_POST['username'], $_POST['password'])) {
             echo '<div class="alert alert-success" role="alert">' Connexion réussie'</div>';
         } else{
@@ -25,7 +20,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         // Perform the redirect
         header("Location: " . $target_url, true, 302); // 302 is a temporary redirect
         exit;
-    }
+    }*/
 } else {
         $target_url = "index.php?msg=" . urlencode("Erreur: Tous les champs doivent être remplis");
 
@@ -34,6 +29,3 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         exit;
     }
 ?>
-
- </body>
-</html>
