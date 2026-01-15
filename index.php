@@ -13,7 +13,7 @@
                 <div class="col">
 
 
-                    <form method="POST" action="./login">
+                    <form method="POST" action="./login.php">
 
                     <?php
                         $msg = $_GET['msg'];
