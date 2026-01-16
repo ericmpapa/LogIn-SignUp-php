@@ -6,7 +6,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     echo 'ok';
     if ($db->dbConnect()) {
         if ($db->logIn("users", $_POST['username'], $_POST['password'])) {
-            echo '<div class="alert alert-success" role="alert">' Connexion réussie'</div>';
+            echo '<div class="alert alert-success" role="alert"> Connexion réussie </div>';
         } else{
             $target_url = "index.php?msg=" . urlencode("Erreur: les paramètres d'accès sont incorrects");
 
