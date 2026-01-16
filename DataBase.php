@@ -43,11 +43,7 @@ class DataBase
         $result = mysqli_query($this->connect, $this->sql);
         $row = mysqli_fetch_assoc($result);
         if (mysqli_num_rows($result) != 0) {
-            $dbusername = $row['username'];
-            $dbpassword = $row['password'];
-            if ($dbusername == $username && $password == $dbpassword) { # TODO use secure if ($dbusername == $username && password_verify($password, $dbpassword)) {
-                $login = true;
-            } else $login = false;
+            $login = true;
         } else $login = false;
 
         return $login;
