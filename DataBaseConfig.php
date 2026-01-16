@@ -11,7 +11,7 @@ class DataBaseConfig
     {
 
         $this->servername = 'localhost';
-        $this->username = 'root';
+        $this->username = 'web';
         $this->password = 'admin';
         $this->databasename = 'testweb';
 
