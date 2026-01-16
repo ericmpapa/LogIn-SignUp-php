@@ -1,4 +1,10 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+         <link rel="stylesheet" href="bootstrap.min.css" />
+         <script src="bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
 <?php
 require "DataBase.php";
 $db = new DataBase();
@@ -30,3 +36,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         exit;
     }
 ?>
+
+   </body>
+</html>
+
