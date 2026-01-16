@@ -16,8 +16,9 @@
                     <form method="POST" action="./login.php">
 
                     <?php
-                        $msg = $_GET['msg'];
-                        if(!is_null($msg)){
+                        
+                        if(isset($_GET['msg'])){
+                            $msg = $_GET['msg'];
                             echo '<div class="alert alert-danger" role="alert">'.$msg.'</div>';
                         }
                     ?>
