@@ -9,7 +9,6 @@
 require "DataBase.php";
 $db = new DataBase();
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    echo 'ok';
     if ($db->dbConnect()) {
         if ($db->logIn("users", $_POST['username'], $_POST['password'])) {
             echo '<div class="alert alert-success" role="alert"> Connexion réussie </div>';
